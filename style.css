@@ -11,6 +11,8 @@ canvas,input{
 }
 
 
+
+
 .split {
   height: 100%;
   width: 50%;
@@ -82,8 +84,12 @@ p {
   }
   
   h1 {
-    font-size: 50px;
-    word-break: break-all;
+    font-size: 40px;
+    color: #f1f1f1;
+    display:inline;
+    padding-left: 610px;
+    text-decoration: underline;
+
   }
   
   .row {
