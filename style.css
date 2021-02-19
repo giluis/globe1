@@ -1,8 +1,137 @@
-html, body {
+html,body {
   margin: 0;
   padding: 0;
-  background-color: #000000
+  height: 100%;
+  overflow: hidden;
+  background-image: url("https://i.ytimg.com/vi/JquobII5VjA/maxresdefault.jpg");
 }
-canvas {
+canvas,input{
   display: block;
+  margin-top: 200px;
 }
+
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 100px;
+  overflow-x: hidden;
+  padding-top: 20px;
+  right: 0;
+}
+
+
+.wrapper {
+  text-align: center;
+  margin: auto;
+  font-family: Muli !important;
+
+}
+
+p {
+  font-size: 16px;
+  font-family: Montserrat;
+}
+  .item{
+      display: inline-block;
+      width: 650px;
+      height: 800px;
+      padding: 12px;
+      background-color: rgb(255, 255, 255);
+  }
+  .animated{
+      -webkit-animation-duration:3s;
+      animation-duration:3s;
+      -webkit-animation-fill-mode:both;
+      animation-fill-mode:both
+  }
+
+  @-webkit-keyframes fadeInRight{
+      0%{
+          opacity:0;
+          -webkit-transform:translateX(200px);
+          transform:translateX(200px)
+      }
+      100%{
+          opacity:0.6;
+          -webkit-transform:translateX(0);
+          transform:translateX(0)
+      }
+  }
+
+  .fadeInRight{
+      -webkit-animation-name:fadeInRight;
+      animation-name:fadeInRight
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+  }
+  
+  /* Center website */
+  .main {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 50px;
+    word-break: break-all;
+  }
+  
+  .row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+  }
+
+  .column2 {
+    float: left;
+    width: 30%;
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
