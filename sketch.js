@@ -14,19 +14,37 @@ let bg;
 // ];
 
 
-
 function setup() {
+  var div = document.querySelector(".item");
+  var div2 = document.querySelector(".info");
+  div.style.display = "none";
+  var btn = document.querySelector(".Me");
+  var btn2 = document.querySelector(".Info");
+
+  btn.addEventListener("click", function(){
+    div2.style.display="none";
+    div.style.display = "block";
+    div.classList.add("fadeInRight");
+  });
+
+  btn2.addEventListener("click", function(){
+    div.style.display="none";
+    div2.style.display = "block";
+    div.classList.add("fadeInRight");
+  });
+
   bg=loadImage('stars.jpg');
   createCanvas(800,800,WEBGL);
   detailX = createSlider(3,24,3);
   detailX.position(10,height+5);
   detailX.style('width','80px');
   img = loadImage('map4.png');
-  button = createButton('click me');
-  button.position(19, 19);
-  button.mousePressed(e=>autoRotate = !autoRotate);
+  // button = createButton('click me');
+  // button.position(19, 19);
+  // button.mousePressed(e=>autoRotate = !autoRotate);
 
 }
+
 
 
 

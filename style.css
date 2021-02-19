@@ -34,21 +34,20 @@ p {
   font-size: 16px;
   font-family: Montserrat;
 }
-  .item{
+.item,.info{
       display: inline-block;
       width: 650px;
       height: 800px;
       padding: 12px;
       background-color: rgb(255, 255, 255);
-  }
-  .animated{
+  
       -webkit-animation-duration:3s;
       animation-duration:3s;
       -webkit-animation-fill-mode:both;
       animation-fill-mode:both
   }
 
-  @-webkit-keyframes fadeInRight{
+@-webkit-keyframes fadeInRight{
       0%{
           opacity:0;
           -webkit-transform:translateX(200px);
@@ -134,4 +133,11 @@ p {
       width: 100%;
     }
   }
+
+  .fade{
+    width:200px;
+    height: 200px;
+    background: red;
+    opacity:0;
+}
 
