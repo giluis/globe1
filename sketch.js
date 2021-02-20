@@ -32,15 +32,16 @@ let latPreciseSlider;
 let lonPreciseSlider;
 let saveCoorsbtn;
 function setup() {
-  let cnv = createCanvas(800, 800, WEBGL);
+  let cnv = createCanvas(900, 800, WEBGL);
   cnv.style("position:absolute;top:0;left:0");
   bg = loadImage('stars.jpg');
-  createCanvas(800, 800, WEBGL);
   img = loadImage('map4.png');
   face = loadImage('face1.png')
   button = createButton('Toggle rotation');
   button.position(19, 19);
   button.mousePressed(e => globe.toggleRotation());
+  let nextBtn = createButton('Next tag');
+  nextBtn.mousePressed(e=>globe.selectNextTag());
   globe = new Globe(radius, [10, 40, 300], [0.43, 3.5, 0], detail);
   latSlider = createSlider(0, 2 * Math.PI, 0, 0.00001);
   lonSlider = createSlider(0, 2 * Math.PI, 0, 0.00001);
@@ -50,9 +51,21 @@ function setup() {
   saveCoorsbtn.mousePressed(e => saveCoors());
   // globe.start();
   points.forEach(p => globe.addTag(20, 30, p))
-  let nextBtn = createButton('Next tag');
-  nextBtn.mousePressed(e=>globe.selectNextTag());
 }
+
+function selectNextTag(){
+  globe.selectNextTag();
+}
+
+function selectPrevTag(){
+  globe.selectPrevTag();
+}
+
+function toggleRotation(){
+  globe.toggleRotation();
+}
+
+
 
 // tag1.startRotation();
 

@@ -68,6 +68,22 @@ class Globe {
         this.tags.forEach(t => t.update(this.radius, this.rotation));
     }
 
+    selectPrevTag(){
+        let s;
+        for(let i = 0; i< this.tags.length;i++){
+            if(this.tags[i].selected){
+                if(i== 0)
+                    s = this.tags.length -1;
+                else
+                    s = i-1;
+                this.tags[i].selected = false;
+            }
+        }
+        if(!s)
+            this.tags[0].selected = true;
+        this.tags[s].selected = true;
+    }
+
     selectNextTag(){
         let s;
         for(let i = 0; i< this.tags.length;i++){
