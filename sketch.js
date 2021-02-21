@@ -49,7 +49,7 @@ function setup() {
   lonPreciseSlider = createSlider(0, 0.1, 0, 0.001);
   saveCoorsbtn = createButton('Save coors');
   saveCoorsbtn.mousePressed(e => saveCoors());
-  // globe.start();
+  globe.start();
   points.forEach(p => globe.addTag(20, 30, p))
 }
 

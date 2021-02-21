@@ -10,6 +10,8 @@ class Globe {
         this.isRotating = true;
         this.radians = true;
         this.tags = [];
+        this.home =  [...initialRotation];
+        this.shouldStopAtHome =false;
     }
     perimeter() {
         return this.radius * 2 * Math.PI;
@@ -19,6 +21,12 @@ class Globe {
             return [0, 0, 0];
         return [Math.sin(lat), 0, Math.cos(lat)];
     }
+
+
+    stopAtHome(){
+        this.shouldStopAtHome = true;
+    }
+
     lonVector(lon) {
         if (lon === 0)
             return [0, 0, 0];
@@ -66,6 +74,18 @@ class Globe {
         this.rotationVel = this.rotationVel.map((v, i) => v + this.rotationAcc[i]);
         this.rotation = this.rotation.map((r, i) => r + this.rotationVel[i]);
         this.tags.forEach(t => t.update(this.radius, this.rotation));
+        if(this.shouldStopAtHome && this.isAtHome()){
+            this.rotationAcc = [0,0,0];
+            this.rotationVel = [0,0,0];
+            this.shouldStopAtHome = false;
+        }
+    }
+
+    isAtHome(){
+        let tolerance = 0.01;
+        let [,ry,] = this.rotation.map(r=>r%(2*PI));
+        let [,hy,] = this.home.map(h=>h%(2*PI));
+        return ry < hy + tolerance && ry > hy - tolerance;
     }
 
     selectPrevTag(){
@@ -119,3 +139,4 @@ Globe.MAX_VEL = [0.03, 0.01, 0.1];
 Globe.MIN_VEL = [0, 0, 0];
 Globe.NORMAL_ACC = [0, 1e-4, 0];
 Globe.NORMAL_DESACC = [0, -3e-4, 0];
+

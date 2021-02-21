@@ -8,6 +8,11 @@ class Tag {
         this.res = res;
         this.rotation = [...initialRotation];
     }
+
+    defineTexture(face, name){
+        this.name = name;
+        this.face = face;
+    }
     update(radius, globeRotation) {
         let [lat, lon] = this.coors;
         let [x, y, z] = this.pos;
@@ -29,6 +34,7 @@ class Tag {
         rotateY(ry);
         rotateZ(rz);
         texture(face);
+        noStroke();
         plane(this.selected?10:4);
         pop();
     }
