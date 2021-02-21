@@ -20,6 +20,7 @@ let points = [
 let nextTagBtn;
 
 function setup() {
+  
   let cnv = createCanvas(900, 500, WEBGL);
   cnv.style("position:absolute;bottom:0;left:0");
   cnv.parent("globe");

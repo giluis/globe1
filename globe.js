@@ -63,7 +63,7 @@ class Globe {
 
     }
     limitVel() {
-        this.rotationVel = thFis.rotationVel.map((v, i) => {
+        this.rotationVel = this.rotationVel.map((v, i) => {
             if (v > Globe.MAX_VEL[i]) {
                 this.rotationAcc[i] = 0;
                 return Globe.MAX_VEL[i];

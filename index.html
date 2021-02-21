@@ -7,14 +7,11 @@
     <script src="tag.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js" integrity="sha512-b/htz6gIyFi3dwSoZ0Uv3cuv3Ony7EeKkacgrcVg8CMzu90n777qveu0PBcbZUA7TzyENGtU+qZRuFAkfqgyoQ==" crossorigin="anonymous"></script>
     <script src="sketch.js"></script>
-    <script>
-      
-    </script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
 
 </head>
-</head>
+
 <body>
   <h1>Team hylyght</h1>
   <div class="bt">
@@ -22,74 +19,77 @@
       <button class="Info">Info</button>
       <button class="Next">Next</button>
   </div>
+  <div id="globe"></div>
       <div class="split right"> 
         <div class="centered">
-            <div class="wrapper">
-              <br>
-              <br>
-                <div class="info fadeInRight">
-                  <h2>INFO</h2>
-                    <hr>               
-                    <div class="row">
-                      <div class="column2">
-                        <div class="content2">
-                          <h2 class="intro"> Who are we?</h2>
-                          <p class="text">Hey! We are international Master/Bachelor students from Italy,France,Portugal and Belgium! 3 of us are It specialist , 2 are sport science, 1 Medical Information and 1 electronic engineer!</p>
-                        </div>
-                      </div>
-                      <div class="column2">
-                        <div class="content2">
-                          <h2  class="intro"> Our Project</h2>
-                          <p class="text">....</p>
-                        </div>
+          <div class="wrapper">
+            <br>
+            <br>
+              <div class="info fadeInRight">
+                <h2>INFO</h2>
+                  <hr>               
+                  <div class="row">
+                    <div class="column2">
+                      <div class="content2">
+                        <h2 class="intro"> Who are we?</h2>
+                        <p class="text">Hey! We are international Master/Bachelor students from Italy,France,Portugal,Germany and Belgium! 3 of us are It specialist , 2 are sport science, 1 Medical Information and 1 electronic engineer!</p>
                       </div>
                     </div>
-                </div>
-                <div class="item" >
-                    <h2>PORTFOLIO</h2>
-                    <hr>
+                    <div class="column2">
+                      <div class="content2">
+                        <h2  class="intro"> Our Project</h2>
+                        <p class="text">Hylyghts builds tools for experts in sports; directed towards talent identification and development in young athletes and towards injury prevention and return to sport screening in young and not-so-young athletes. We work with professional as well as recreational athletes and partner with national federations and large clubs but also with physio practices and hospitals.</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="item" >
+                  <h2>PORTFOLIO</h2>
+                  <hr>
+                  <div class="row">
+                    <div class="column">
+                      <div class="content">
+                        <p>Name: <span id="Name"></span></p>
+                        <p>Country: <span id="country"></span></p>
+                        <p>Study: <span id="study"></span></p>
+                        <p>ECTS involvement: <span id="ects"></span></p>
+                        <p>Contact details: <span id="contacts"></span></p>
+                      </div>
+                    </div>
+                    <div class="photo-column">
+                      <div class="content">
+                        <img id="img" width="150" height="200">
+                      </div>
+                    </div>    
+                    <br>
+                    <div class="row">
+                      <div class="column2">
+                        <div class="content">
+                          <h3>About Me:</h3>
+                          <br>
+                          <span id="me"></span>
+                        </div>
+                      </div>        
+                    </div>
+                    <div class="row">
+                      <div class="column2">
+                        <div class="content">
+                          <h3>Hobbies and interests</h3>
+                          <span id="hobbies"></span>
+                        </div>
+                      </div>        
+                    </div>
                     <div class="row">
                       <div class="column">
                         <div class="content">
-                          <p>Name: <span id="Name"></span></p>
-                          <p>Country: <span id="country"></span></p>
-                          <p>Study: <span id="study"></span></p>
-                          <p>ECTS involvement: <span id="ects"></span></p>
-                          <p>Contact details: <span id="contacts"></span></p>
+                          <a id="cv" download>
+                            <button class="cvbt" style="font-weight: bold;">Download cv</button>
+                          </a>
                         </div>
-                      </div>
-                      <div class="photo-column">
-                        <div class="content">
-                          <img id="img" width="150" height="200">
-                        </div>
-                      </div>    
-                      <div class="row">
-                        <div class="column">
-                          <div class="content">
-                            <h3>About Me:</h3>
-                            <p>...</p>
-                          </div>
-                        </div>        
-                      </div>
-                      <div class="row">
-                        <div class="column">
-                          <div class="content">
-                            <h3>Hobbies and interests</h3>
-                            <p>...</p>
-                          </div>
-                        </div>        
-                      </div>
-                      <div class="row">
-                        <div class="column3">
-                          <div class="content">
-                            <a id="cv"  download>
-                              <button class="cvbt" style="font-weight: bold;">Download cv</button>
-                            </a>
-                          </div>
-                        </div>        
-                      </div>
+                      </div>        
+                    </div>
+                </div>
             </div>
-        </div>
         </div>    
       </div>
 </body>
