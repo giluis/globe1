@@ -55,8 +55,15 @@ class Globe {
         else
             this.stop();
     }
+
+    markPoint(lat,lon){
+        let t = new Tag(12,13,[lat,lon],this.pos,[...this.rotation],24);
+        t.update(this.radius,this.rotation);
+        t.render(this.pos);
+
+    }
     limitVel() {
-        this.rotationVel = this.rotationVel.map((v, i) => {
+        this.rotationVel = thFis.rotationVel.map((v, i) => {
             if (v > Globe.MAX_VEL[i]) {
                 this.rotationAcc[i] = 0;
                 return Globe.MAX_VEL[i];
@@ -89,6 +96,7 @@ class Globe {
     }
 
     selectPrevTag(){
+        debugger;
         let s;
         for(let i = 0; i< this.tags.length;i++){
             if(this.tags[i].selected){
@@ -99,12 +107,16 @@ class Globe {
                 this.tags[i].selected = false;
             }
         }
-        if(!s)
+        if(!s){
             this.tags[0].selected = true;
+            return;
+        }
         this.tags[s].selected = true;
     }
 
     selectNextTag(){
+        console.log("Inside globe select next tag");
+        console.log(globe);
         let s;
         for(let i = 0; i< this.tags.length;i++){
             if(this.tags[i].selected){

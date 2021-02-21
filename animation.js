@@ -10,33 +10,48 @@
   var div2 = document.querySelector(".info");
   div.style.display = "none";
   div2.style.display = "none";
-  var btn = document.querySelector(".Next");
-  var btn2 = document.querySelector(".Info");
-  var btn3 = document.querySelector(".Prev");
-
-  btn.addEventListener("click", function(){
+  var nextbtn = document.querySelector(".Next");
+  var infobtn = document.querySelector(".Info");
+  var prevbtn = document.querySelector(".Prev");
+  let teamInfoText = "About the Team";
+  let elementsInfoText = "About the People"; 
+  let currentInfoText = elementsInfoText;
+  function toggleInfoText(){
+    if(currentInfoText === teamInfoText){
+      currentInfoText = elementsInfoText;
+    }else if(currentInfoText ===  elementsInfoText){
+      currentInfoText = teamInfoText;
+    }
+  }
+  nextbtn.addEventListener("click", function(){
     if(counter >=6){
       counter=-1;
     }
+    if(isGlobeMoving()){
+      stopAtHome();
+    }
     counter++;
-    console.log(counter)
-    toggleRotation();
     selectNextTag();
     updateinfo(counter,div,div2);
   });
-  btn3.addEventListener("click", function(){
+  prevbtn.addEventListener("click", function(){
     if(counter <=0){
       counter=7;
     }
+    if(isGlobeMoving()){
+      stopAtHome();
+    }
     counter--;
-    console.log(counter)
     selectPrevTag();
     updateinfo(counter,div,div2)
   });
-  btn2.addEventListener("click", function(){
+  infobtn.addEventListener("click", function(){
     div.style.display="none";
     div2.style.display = "block";
-    toggleRotation();
+    // toggleInfoText();
+    // let i = document.querySelector(".Info");
+    // i.innerHTML = currentInfoText;
+    startGlobe();
     div.classList.add("fadeInRight");
   });
 
