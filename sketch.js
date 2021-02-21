@@ -13,6 +13,20 @@ let bg;
 //   0,0,0,
 //   0,1,0
 // ];
+
+
+function setup() {
+ 
+  bg=loadImage('stars.jpg');
+  createCanvas(800,800,WEBGL);
+  detailX = createSlider(300,24,3);
+  detailX.position(10,height+5);
+  detailX.style('width','8px');
+  img = loadImage('map4.png');
+  button = createButton('click me');
+  button.position(19, 109);
+  button.mousePressed(e=>autoRotate = !autoRotate);
+}
 let xa = 5000;
 let globe;
 /**
@@ -27,7 +41,7 @@ let points = [
 
 ];
 let latSlider;
-let lonSilder;
+let lonSlider;
 let latPreciseSlider;
 let lonPreciseSlider;
 let saveCoorsbtn;
@@ -57,6 +71,7 @@ function selectNextTag(){
   globe.selectNextTag();
 }
 
+  
 function selectPrevTag(){
   globe.selectPrevTag();
 }
@@ -77,7 +92,7 @@ function saveCoors() {
 
 function draw() {
   //camera(...cameraCoordinates)
-  background(0)
+  // background(0)
   ambientLight(200);
   let camX = map(mouseX, 0, width, -400, 400);
   let camZ = (height / 2) / tan(PI / 6);
@@ -87,5 +102,11 @@ function draw() {
   let coors = [latSlider.value() + latPreciseSlider.value(), lonSlider.value() + lonPreciseSlider.value()]
   globe.update();
   globe.render();
+  latPreciseSlider.remove();
+  lonPreciseSlider.remove();
+  latSlider.remove();
+  lonSlider.remove();
+  saveCoorsbtn.remove();
+
 };
 // 6.11638
