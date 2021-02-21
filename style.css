@@ -10,17 +10,13 @@ canvas,input{
   margin-top: 200px;
 }
 
-
-
-
 .split {
   height: 100%;
-  width: 50%;
+  width: 40%;
   position: fixed;
   z-index: 1;
   top: 100px;
   overflow-x: hidden;
-  padding-top: 20px;
   right: 0;
 }
 
@@ -29,12 +25,17 @@ canvas,input{
   text-align: center;
   margin: auto;
   font-family: Muli !important;
-
 }
 
-p {
-  font-size: 16px;
-  font-family: Montserrat;
+p,h3 {
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+}
+
+
+span{
+  font-weight: normal;
 }
 .item,.info{
       display: inline-block;
@@ -87,10 +88,26 @@ p {
     font-size: 40px;
     color: #f1f1f1;
     display:inline;
-    padding-left: 610px;
+    padding-left: 360px;
     text-decoration: underline;
 
   }
+
+
+
+  h2.intro{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  p.text{
+    text-align: center;
+    font-weight: normal;
+
+  }
+
   
   .row {
     margin: 8px -16px;
@@ -105,12 +122,16 @@ p {
   /* Create four equal columns that floats next to each other */
   .column {
     float: left;
-    width: 25%;
+    width: 70%;
   }
 
-  .column2 {
-    float: left;
-    width: 30%;
+  .column2, .column3 {
+    text-align: center;
+    width: 100;
+  }
+
+  .photo-column{
+    text-align: right;
   }
   
   /* Clear floats after rows */ 
@@ -124,6 +145,10 @@ p {
   .content {
     background-color: white;
     padding: 10px;
+  }
+
+  .content2{
+    text-align: center;
   }
   
   /* Responsive layout - makes a two column-layout instead of four columns */
@@ -145,5 +170,37 @@ p {
     height: 200px;
     background: red;
     opacity:0;
+}
+button {
+  width: 120px;
+  border-radius: 8px; 
+}
+
+.cvbt{
+  width: 120px;
+  border-radius: 8px; 
+  background-color:dodgerblue;
+  width: 110px;
+  height: 30px;
+}
+
+.bt {
+   margin-left: 1275px;
+}
+
+.Prev{
+  height: 30px;
+  background: #f1f1f1 url(left.png) no-repeat 10px center;
+  background-position: left;
+
+}
+
+.Next{
+  height: 30px;
+  background: #f1f1f1 url(right.png) no-repeat 10px center;
+  background-position: right;
+}
+.Info{
+  height: 50px;
 }
 
