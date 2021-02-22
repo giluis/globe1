@@ -115,8 +115,6 @@ class Globe {
     }
 
     selectNextTag(){
-        console.log("Inside globe select next tag");
-        console.log(globe);
         let s;
         for(let i = 0; i< this.tags.length;i++){
             if(this.tags[i].selected){

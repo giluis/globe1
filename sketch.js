@@ -52,8 +52,8 @@ function setup() {
   face = loadImage('face1.png')
   globe = new Globe(radius, [12, 82, 190], home, detail);
  
-  saveCoorsBtn = createButton('Save coors');
-  saveCoorsBtn.mousePressed(e => saveCoors());
+  // saveCoorsBtn = createButton('Save coors');
+  // saveCoorsBtn.mousePressed(e => saveCoors());
   points.forEach((p,i)=>globe.addTag(20,30,p,images[i]));
   images = imagesSrc.map(i=>loadImage(i));
 }
