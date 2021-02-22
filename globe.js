@@ -108,7 +108,7 @@ class Globe {
             }
         }
         if(!s){
-            this.tags[0].selected = true;
+            this.tags[this.tags.length-1].selected = true;
             return;
         }
         this.tags[s].selected = true;

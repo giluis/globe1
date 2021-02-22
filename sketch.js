@@ -107,7 +107,6 @@ function stopAtHome() {
 }
 
 function selectPrevTag() {
-  debugger;
   globe.selectPrevTag();
 }
 
