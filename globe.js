@@ -41,8 +41,8 @@ class Globe {
         this.rotationAcc = [...Globe.NORMAL_ACC];
         this.isRotating = true;
     }
-    addTag(tWidth, tHeight, [lat, lon]) {
-        let t = new Tag(tWidth, tHeight, [lat, lon], this.pos, this.rotation, 24);
+    addTag(tWidth, tHeight, [lat, lon],selImage) {
+        let t = new Tag(tWidth, tHeight, [lat, lon], this.pos, this.rotation, 24,selImage);
         this.tags.push(t);
     }
     stop() {
@@ -63,7 +63,7 @@ class Globe {
 
     }
     limitVel() {
-        this.rotationVel = thFis.rotationVel.map((v, i) => {
+        this.rotationVel = this.rotationVel.map((v, i) => {
             if (v > Globe.MAX_VEL[i]) {
                 this.rotationAcc[i] = 0;
                 return Globe.MAX_VEL[i];
@@ -127,8 +127,10 @@ class Globe {
                 this.tags[i].selected = false;
             }
         }
-        if(!s)
+        if(!s){
             this.tags[0].selected = true;
+            return;
+        }
         this.tags[s].selected = true;
     }
 
