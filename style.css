@@ -166,6 +166,7 @@ button {
 }
 
 .bt {
+  display: flex;
    margin-left: 1275px;
 }
 
@@ -184,5 +185,22 @@ button {
 
 .Info{
   height: 50px;
+}
+
+@media screen and (max-device-width: 1650px) {
+  .bt {
+    display: flex;
+    margin-left: 1000px;
+  }
+
+  .split {
+    height: 100%;
+    width: 45%;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    overflow-x: hidden;
+    right: 0;
+  }
 }
 
