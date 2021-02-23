@@ -41,8 +41,8 @@ class Globe {
         this.rotationAcc = [...Globe.NORMAL_ACC];
         this.isRotating = true;
     }
-    addTag(tWidth, tHeight, [lat, lon]) {
-        let t = new Tag(tWidth, tHeight, [lat, lon], this.pos, this.rotation, 24);
+    addTag(tWidth, tHeight, [lat, lon],selImage) {
+        let t = new Tag(tWidth, tHeight, [lat, lon], this.pos, this.rotation, 24,selImage);
         this.tags.push(t);
     }
     stop() {
@@ -108,15 +108,13 @@ class Globe {
             }
         }
         if(!s){
-            this.tags[0].selected = true;
+            this.tags[this.tags.length-1].selected = true;
             return;
         }
         this.tags[s].selected = true;
     }
 
     selectNextTag(){
-        console.log("Inside globe select next tag");
-        console.log(globe);
         let s;
         for(let i = 0; i< this.tags.length;i++){
             if(this.tags[i].selected){
@@ -127,8 +125,10 @@ class Globe {
                 this.tags[i].selected = false;
             }
         }
-        if(!s)
+        if(!s){
             this.tags[0].selected = true;
+            return;
+        }
         this.tags[s].selected = true;
     }
 

@@ -1,26 +1,86 @@
   var counter=-1;
-  var Name = ["Andres Davalos", "Luis Gil", "Trong Vu Le","Diego Pinto","Francesco Argentati","Laura Kruchen","Kevin Leriche"];
-  var study = ["Elektronic-ict", "IT", "IT","Sport science","Electronic Engineering","Medical Information Management","Sport science"];
-  var country = ["Belgium", "Portugal", "Germany","France","Italy","Germany","France"];
-  var ects = ["6", "18", "10","10","6","9","10"];
-  var contacts = ["andres_el_davalos@hotmail.com", "1170727@isep.it", "trongvul@hochschule-trier.de","diego.pinto@etu.univ-orleans.fr","francescoargentati@libero.it","laura.kruchen@web.de","keleriche@gmail.com"];
-  var pic= ["andres.jpg","luis.jpg","vu.jpg","diego.jpg","francesco.jpg","laura.jpg","kevin.jpg"];
-  var cv = ["andres.pdf","luis.pdf","vu.pdf","diego.pdf","francesco.pdf","laura.pdf","kevin.pdf"];
-  var me = [" Hey I’m an Belgian student who was born in Ecuador.I’ve been since my 2years in Belgium. I’m currently studying Elektronic-ict. My passion are sport; software and hardware. I like to create myown projects and hardware and play with it. ",
-            " I am creative and work well in a team. I take great pride in a job well done and like to do everything as close to perfect as I possibly can",
-            " Hey! i'm an student from Germany who study computer science at Trier University. My programming skills are: Java, Python, Javascript, MATHLAB, Racket HTML5, CSS3, Node.js, Express, PHP, Bootstrap and Machine Learning /Big Data",
-            " I'm 22 years-old and I’m from France near Orleans. I’ve always lived here since my childhood. I practice basket-ball since I was 5 years-old, so I can tell it’s my passion. I’m studying at the University of Orleans in Sport and Science. I’m specialized inathletes reahbilitation after one or many injuries. I am therefore very happy to participate to this project with everyone of us",
-            " I'm a electronic engineer (master's degree) and I'm a student of a university masters called ' Innovation, development and management of energy networks based on renewable energies'.",
-            " I'm 20 years old German student from Dusseldorf, I studie Medical information Management at the Fliedner. I got good knowledge of MS-Office, basics java programming,basics SAS programming",
-            " Curious and eager to know,i want to understand how our body works,it’s for me a daily quest that i try to analyse through different approaches (physiology,anatomy,posturology). Passionate about my work, i like to pass on my knowledge and this allow everyone to obtain a part of truth about this complex machine that is the human body."];
-  var hobbies = ["Football and Fitness",
-                 "Music (trombone, piano, guitar),Meditation, Programming, Philosophy",
-                 "Football, Jogging, Gymnastics, Walking, Travelling, Photography, Meditation, Mindfulness, Reading",
-                 "Sport and Basket",
-                 "Music, Football and traveling",
-                 "Partying, travelling, horse riding",
-                 "Sport, Music, Scientifical Reading, Graphism design"];
-
+  var Name = [
+    "Luis Gil",
+    "Diego Pinto",
+    "Kevin Leriche",
+    "Andres Davalos",
+    "Laura Kruchen",
+    "Vu Le Trong",
+    "Francesco Argentati",
+  ];
+  var study = [
+    "IT",
+    "Sport science",
+    "Sport science",
+    "Elektronic-ict",
+    "Medical Information Management",
+    "IT",
+    "Electronic Engineering",
+  ];
+  var country = [
+    "Portugal",
+    "France",
+    "France",
+    "Belgium",
+    "Germany",
+    "Germany",
+    "Italy",
+  ];
+  var ects = [
+    "18",
+    "10",
+    "10",
+    "6",
+    "9",
+    "10",
+    "6",
+  ];
+  var contacts = [
+    "1170727@isep.it",
+    "diego.pinto@etu.univ-orleans.fr",
+    "keleriche@gmail.com",
+    "andres_el_davalos@hotmail.com",
+    "laura.kruchen@web.de",
+    "trongvul@hochsttrier.de",
+    "francescoargentati@libero.it",
+  ]
+    ;
+  var pic = [
+    "luis.jpg",
+    "diego.jpg",
+    "kevin.jpg",
+    "andres.jpg",
+    "laura.jpg",
+    "vu.jpg",
+    "francesco.jpg",
+  ];
+  var cv = [
+    "luis.pdf",
+    "diego.pdf",
+    "kevin.pdf",
+    "andres.pdf",
+    "laura.pdf",
+    "vu.pdf",
+    "francesco.pdf",
+  ];
+  var me = [
+    " I am creative and work well in a team. I take great pride in a job well done and like to do everything as close to perfect as I possibly can",
+    " I'm 22 years-old and I’m from France near Orleans. I’ve always lived here since my childhood. I practice basket-ball since I was 5 years-old, so I can tell it’s my passion. I’m studying at the University of Orleans in Sport and Science. I’m specialized inathletes reahbilitation after one or many injuries. I am therefore very happy to participate to this project with everyone of us",
+    " Curious and eager to know,i want to understand how our body works,it’s for me a daily quest that i try to analyse through different approaches (physiology,anatomy,posturology). Passionate about my work, i like to pass on my knowledge and this allow everyone to obtain a part of truth about this complex machine that is the human body.",
+    " Hey I’m an Belgian student who was born in Ecuador.I’ve been since my 2years in Belgium. I’m currently studying Elektronic-ict. My passion are sport; software and hardware. I like to create myown projects and hardware and play with it. ",
+    " I'm 20 years old German student from Dusseldorf, I studie Medical information Management at the Fliedner. I got good knowledge of MS-Office, basics java programming,basics SAS programming",
+    " Hey! i'm an student from Germany who study computer science at Trier University. My programming skills are: Java, Python, Javascript, MATHLAB, Racket HTML5, CSS3, Node.js, Express, PHP, Bootstrap and Machine Learning /Big Data",
+    " I'm a electronic engineer (master's degree) and I'm a student of a university masters called ' Innovation, development and management of energy networks based on renewable energies'.",
+  ]
+    var hobbies = [
+    "Music (trombone, piano, guitar),Meditation, Programming, Philosophy",
+    "Sport and Basket",
+    "Sport, Music, Scientifical Reading, Graphism design",
+    "Football and Fitness",
+    "Partying, travelling, horse riding",
+    "Football, Jogging, Gymnastics, Walking, Travelling, Photography, Meditation, Mindfulness, Reading",
+    "Music, Football and traveling",
+    ]
   var div = document.querySelector(".item");
   var div2 = document.querySelector(".info");
   div.style.display = "none";
@@ -81,5 +141,4 @@
     document.getElementById("hobbies").innerHTML = hobbies[count];
     document.getElementById("cv").href = cv[count];
 
-    
-  }
+}
