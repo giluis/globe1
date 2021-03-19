@@ -1,6 +1,7 @@
 var counter = -1;
 var Name = [
   "Luis Gil",
+  "Darsan Muhamad",
   "Rawand Rebwar",
   "Diego Pinto",
   "Kevin Leriche",
@@ -11,6 +12,7 @@ var Name = [
 ];
 var study = [
   "IT",
+  "CS",
   "IT",
   "Sport science",
   "Sport science",
@@ -22,6 +24,7 @@ var study = [
 var country = [
   "Portugal",
   "Iraq",
+  "Iraq",
   "France",
   "France",
   "Belgium",
@@ -29,9 +32,10 @@ var country = [
   "Germany",
   "Italy",
 ];
-var ects = ["18", "12", "10", "10", "6", "9", "10", "6"];
+var ects = ["18", "10", "12", "10", "10", "6", "9", "10", "6"];
 var contacts = [
   "1170727@isep.it",
+  "darsan.muhamad@gmail.com",
   "rawand.313175119@uhd.edu.iq",
   "diego.pinto@etu.univ-orleans.fr",
   "keleriche@gmail.com",
@@ -42,6 +46,7 @@ var contacts = [
 ];
 var pic = [
   "luis.jpg",
+  "darsan.jpg",
   "rawand.jpg",
   "diego.jpg",
   "kevin.jpg",
@@ -52,6 +57,7 @@ var pic = [
 ];
 var cv = [
   "luis.pdf",
+  "darsan.pdf",
   "rawand.pdf",
   "diego.pdf",
   "kevin.pdf",
@@ -62,6 +68,7 @@ var cv = [
 ];
 var me = [
   " I am creative and work well in a team. I take great pride in a job well done and like to do everything as close to perfect as I possibly can",
+  " hello my name is Darsan I live in Iraqi Kurdistan, right now I am studying computer science at the University of Human Development,I am a very hard worker, if I have a task I will not quit untilI have finished it as best as I can.",
   " Hey there! I'm Rawand, a Kurdistani(KRG in Iraq) IT student who loves web technologies. So, for the last few years, besides studying IT, I've been busy creating websites and web apps.  My favorite stack is MEVN.' ",
   " I'm 22 years-old and I’m from France near Orleans. I’ve always lived here since my childhood. I practice basket-ball since I was 5 years-old, so I can tell it’s my passion. I’m studying at the University of Orleans in Sport and Science. I’m specialized inathletes reahbilitation after one or many injuries. I am therefore very happy to participate to this project with everyone of us",
   " Curious and eager to know,i want to understand how our body works,it’s for me a daily quest that i try to analyse through different approaches (physiology,anatomy,posturology). Passionate about my work, i like to pass on my knowledge and this allow everyone to obtain a part of truth about this complex machine that is the human body.",
@@ -72,6 +79,7 @@ var me = [
 ];
 var hobbies = [
   "Music (trombone, piano, guitar),Meditation, Programming, Philosophy",
+  "Watching TV shows, Playing games, programming, reading and listening to music.",
   "Programming, traveling, hiking, and playing video games.",
   "Sport and Basket",
   "Sport, Music, Scientifical Reading, Graphism design",
